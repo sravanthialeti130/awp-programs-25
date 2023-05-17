@@ -1,0 +1,139 @@
+<html>
+<head>
+<script>
+function awp() { 
+var name =document.forms["RegForm"]["Name"]; 
+var email =document.forms["RegForm"]["EMail"]; 
+var phone =document.forms["RegForm"]["Telephone"]; 
+var what =document.forms["RegForm"]["Subject"]; 
+var password =document.forms["RegForm"]["Password"]; 
+var address =document.forms["RegForm"]["Address"];
+if (name.value == "") {
+window.alert("Please enter your name."); 
+name.focus();
+return false;
+}
+if (address.value == "") {
+window.alert("Please enter your address."); 
+address.focus();
+return false;
+}
+if (email.value == "") { window.alert(
+"Please enter a valid e-mail address."); 
+email.focus();
+return false;
+}
+if (phone.value == "") { window.alert(
+"Please enter your telephone number."); 
+phone.focus();
+return false;
+}
+if (password.value == "") { window.alert("Please enter your password");
+ password.focus();
+return false;
+}
+if (what.selectedIndex < 1) { alert("Please enter your course."); 
+what.focus();
+return false;
+}
+return true;
+}
+</script>
+<style >
+div {
+box-sizing: border-box; width: 100%;
+border: 100px solid black; float: left;
+align-content: center; align-items: center; color: blue;
+}
+form {
+margin: 0 auto; width: 600px; color: lightyellow;
+}
+</style>
+</head>
+<body>
+    <form action="#"name="REGISTRATION form"onsubmit="return(validate());">
+        <table cellpadding="10"width="30%" style="color: rgb(77, 42, 165); align-items: center; cellspacing=3">
+        <tr>
+            <td colspan="4">
+                <h1 style="text-align: center; color: aqua">REGISTRATION FORM</h1>
+    <form name="RegForm" action="/submit.php" onsubmit="return awp()" 
+    method="post" >
+    </td>
+    </tr>
+    <tr>
+    <p style="color: red">
+        <td>Name: </td>
+        <td><input type="text"size="65" name="Name" />
+        </td>
+    </p>
+    </tr>
+    <br>
+    <tr>
+    <p style="color: red">
+        <td>Address:</td>
+       <td> <input type="text"size="65" name="Address" />
+       </tr>
+    </td>
+    </p>
+    <br>
+    <tr>
+        <p style="color: red">
+            <td>E-mail Address: </td>
+            <td><input type="text"size="65" name="EMail" />
+            </tr>
+                </td>
+        </p>
+        <br>
+        <tr>
+        <p style="color: red">
+           <td> Password: </td>
+            <td><input type="text"size="65" name="Password" />
+            </td>
+        </tr>
+        </p>
+        <br>
+        <tr>
+        <p style="color: red">
+            <td>Telephone:</td>
+            <td><input type="text"size="65" name="Telephone" />
+        </td> 
+        </tr>
+        </p>
+        <br>
+        <tr>
+            <p style="color: red"> 
+                <td>Select Your course</td>
+            <td><select type="text" value="" name="Subject">
+            <option value="BTECH">BTECH</option>
+            <option value="BBA">BBA</option>
+            <option value="BCA">BCA</option>
+            <option value="B.COM">B.COM</option>
+            <option value="GEEKFORGEEKS">GEEKFORGEEKS</option>
+            </select>
+            </td>
+            </tr>
+            </p>
+            <br>
+            <tr>
+            <p style="color: red">
+                <td>Comments: </td>
+                <td><input type="text"size="65" name="Comments" />
+                </td>
+            </tr>
+            </p>
+            <tr>
+            <p style="color: red">
+            <td><input type="submit"value="send" name="Submit" />
+            <td><input type="reset"value="Reset" name="Reset" />
+                </td>
+            </td>
+            </tr>
+        </p>
+    </form>
+    </body>
+    </html>
+    </form>
+    </table>
+    </body>
+    </html>
+    
